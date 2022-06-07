@@ -21,7 +21,6 @@ class MainViewController: UIViewController {
     var mode : String = "EASY"  // Mode default값은 EASY
     var attackCount : Int = 0       // 공격 횟수를 저장
     var startBoolean : Bool = true  // 게임 최초 실행인지 확인
-    var isMonsterDead : Bool = false // 몬스터가 죽은 상태인지 확인
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var alphaView: UIView!
     
@@ -51,7 +50,7 @@ class MainViewController: UIViewController {
     //MARK: - 게임이 시작되고 난이도에 따라 여러 메서드들을 시작하는 함수
     func startGame(difficulty : String){
         if (difficulty == "EASY"){
-            generateMonsterEASY(monsterCount: fieldMonster.count)
+            generateMonsterEASY()
             // 타이머 시작
             // 음악 시작
             // 이 기능들이 들어가는 공간임
@@ -64,77 +63,82 @@ class MainViewController: UIViewController {
     
     
     //MARK: - 현재 남아있는 몬스터에 따라 나머지 몬스터 생성하는 함수   (UI가 변경되므로 global -> main Queue 사용)
-    func generateMonsterEASY(monsterCount : Int){
-        if(monsterCount == 0){                                                                      // 몬스터를 2마리 소환
-            DispatchQueue.global(qos: .userInitiated).async {
-                for _ in 0...1{
-                    DispatchQueue.main.async {
-                        var monsterView : UIImageView!
-                        let frame = CGRect(x: 354, y: 676, width: 60, height: 100)
-                        monsterView = UIImageView(frame: frame)
-                        monsterView.image = self.monsterImageArray[self.level-1]
-                        self.view.addSubview(monsterView!)                                          // 몬스터 생성
-                        self.fieldMonster.append(monsterView)                                       // 필드에 나와있는 몬스터 목록에 추가
-                        self.moveImage(start: frame.minX, index: self.fieldMonster.count - 1 )      // 몬스터가 위치한 x좌표를 기준으로 움직이기 시작
-                        print("2마리 소환하는 generator야")
-                        print("방금 소환해서 지금은 \(self.fieldMonster.count)마리 소환되어 있어!!")
-                    }
-                    usleep(1000000)                                                                 // 몬스터 생성 간격 1sec
-                }
-            }
-        }
-        else if(monsterCount == 1){                                                                 // 몬스터 1마리 소환
-            DispatchQueue.global(qos: .userInitiated).async {
-                DispatchQueue.main.async {
-                    var monsterView : UIImageView!
-                    let frame = CGRect(x: 354, y: 676, width: 60, height: 100)
-                    monsterView = UIImageView(frame: frame)
-                    monsterView.image = self.monsterImageArray[self.level-1]
-                    self.view.addSubview(monsterView!)                                              // 몬스터 생성
-                    self.fieldMonster.append(monsterView)                                           // 필드에 나와있는 몬스터 목록에 추가
-                    self.moveImage(start: frame.minX, index: self.fieldMonster.count - 1 )          // 몬스터가 위치한 x좌표를 기준으로 움직이기 시작
-                    print("1마리 소환하는 generator야")
-                    print("방금 소환해서 지금은 \(self.fieldMonster.count)마리 소환되어 있어!!")
-                    
+    func generateMonsterEASY(){
+        DispatchQueue.global(qos: .userInitiated).sync {
+            while(true){                                                                    // fieldMonster의 수에 따라 generater가 계속 진행
+                for _ in self.fieldMonster.count..<2{
+                    print("generateMonsterEASY")
+                    self.makeMonster()
+                    usleep(1500000)
                 }
             }
         }
     }
     
-    
-    //MARK: - 몬스터가 처치 되었을 때 동작하는 함수 (UI가 변경되므로 global -> main Queue 사용)
-    func killMonster(){
-        DispatchQueue.global(qos:.userInitiated).async {
+    func makeMonster(){
+        DispatchQueue.global(qos: .userInteractive).async {
             DispatchQueue.main.async {
-                self.isMonsterDead = true                                   // 몬스터는 죽었다!
-                self.fieldMonster[0].removeFromSuperview()                  // 가장 앞에 있는 필드 몬스터를 삭제한다.
-                self.fieldMonster.remove(at: 0)                             // 필드 몬스터 배열에서도 지워준다.
-                print("killMonster에서 몬스터 없애서 현재 남은 몬스터는 \(self.fieldMonster.count)마리")
+                print("makeMonster")
+                var monsterView : UIImageView!
+                let frame = CGRect(x: 354, y: 676, width: 60, height: 100)
+                monsterView = UIImageView(frame: frame)
+                monsterView.image = self.monsterImageArray[self.level-1]
+                self.view.addSubview(monsterView!)                                          // 몬스터 생성
+                self.fieldMonster.append(monsterView)                                       // 필드에 나와있는 몬스터 목록에 추가
+                self.moveImage(start: frame.minX, index: self.fieldMonster.count - 1 )      // 몬스터가 위치한 x좌표를 기준으로 움직이기 시작
             }
         }
-        generateMonsterEASY(monsterCount: fieldMonster.count)               // 필드 몬스터를 다시 소환한다.
-        self.isMonsterDead = false                                          // 이제 다시 몬스터는 살아있다!
-        print("killMonster에서 몬스터 소환하는 중")
-        
     }
-    
     
     //MARK: - 몬스터가 필드에서 주인공에게로 이동하는 것을 구현하는 함수 (UI가 변경되므로 global -> main Queue 사용)
     func moveImage(start: CGFloat, index: Int){
         var moveX = start
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.global(qos: .userInteractive).async {
             while(moveX > 0){
-                moveX -= 1
-                DispatchQueue.main.async {
-                    if(index >= self.fieldMonster.startIndex && index < self.fieldMonster.endIndex){
-                        self.fieldMonster[index].frame = CGRect(x: moveX, y: 676, width: 60, height: 100)
-                    }
-                    else {return;}
+                if self.attackCount == 10{
+                    return self.removeMonster()                 // 몬스터 공격 당할 때
                 }
-                usleep(16666)                                   // 이동속도를 담당 ()
+                else{
+                    moveX -= 1
+                    DispatchQueue.main.async {
+                        if(index >= self.fieldMonster.startIndex && index < self.fieldMonster.endIndex){
+                            self.fieldMonster[index].frame = CGRect(x: moveX, y: 676, width: 60, height: 100)
+                        }
+                        else {
+                            self.fieldMonster[index-1].frame = CGRect(x: moveX, y: 676, width: 60, height: 100)         // remove되서 index가 변경 된
+                        }                                                                                               // 몬스터를 이동시켜 줌
+                    }
+                    usleep(16666)                               // 이동속도를 담당 ()
+                }
+                return self.removeMonster()                     // 몬스터가 캐릭터랑 만나서 사라질 때
             }
         }
     }
+    
+    //MARK: - 몬스터가 처치 되었을 때 동작하는 함수
+    func killMonster(){
+        print("killMonster")
+        DispatchQueue.global(qos:.userInteractive).sync{
+            self.removeMonster()
+            
+        }
+    }
+    
+    
+    //MARK: - 몬스터를 view에서 제거해줌(UI가 변경되므로 global -> main Queue 사용)
+    func removeMonster(){
+        print("removeMonster")
+        DispatchQueue.global(qos: .userInteractive).async {
+            DispatchQueue.main.async {
+                self.fieldMonster[0].removeFromSuperview()                  // 가장 앞에 있는 필드 몬스터를 삭제한다.
+                self.fieldMonster.remove(at: 0)                             // 필드 몬스터 배열에서도 지워준다.
+            }
+        }
+        return;
+    }
+    
+    
+    
     
     
     
@@ -148,15 +152,13 @@ class MainViewController: UIViewController {
     
     //MARK: - 공격버튼을 눌렀을때, 해당하는 action을 취하는 함수
     @IBAction func attackBtnTapped(_ sender: UIButton) {
-        attackCount+=1
-        print(attackCount)
-        if(attackCount == 10){
-            killMonster()
-            attackCount = 0
+        DispatchQueue.global().async {
+            self.attackCount+=1
+            if(self.attackCount == 10){
+                //              killMonster()
+                self.attackCount = 0
+            }
         }
     }
-    
-    
-    
 }
 
