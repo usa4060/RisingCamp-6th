@@ -15,6 +15,7 @@
 		8448AA76284DCE65006B60A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8448AA74284DCE65006B60A7 /* LaunchScreen.storyboard */; };
 		8448AA7E284E0805006B60A7 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448AA7D284E0805006B60A7 /* StartViewController.swift */; };
 		8448AA80284E0812006B60A7 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448AA7F284E0812006B60A7 /* ResultViewController.swift */; };
+		8495973F28589E6600F26667 /* BMHANNAProOTF (1).otf in Resources */ = {isa = PBXBuildFile; fileRef = 8495973E28589E4000F26667 /* BMHANNAProOTF (1).otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8448AA77284DCE65006B60A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8448AA7D284E0805006B60A7 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		8448AA7F284E0812006B60A7 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		8495973E28589E4000F26667 /* BMHANNAProOTF (1).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BMHANNAProOTF (1).otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				8448AA6D284DCE64006B60A7 /* MainViewController.swift */,
 				8448AA7D284E0805006B60A7 /* StartViewController.swift */,
 				8448AA7F284E0812006B60A7 /* ResultViewController.swift */,
+				8495973E28589E4000F26667 /* BMHANNAProOTF (1).otf */,
 				8448AA6F284DCE64006B60A7 /* Main.storyboard */,
 				8448AA72284DCE65006B60A7 /* Assets.xcassets */,
 				8448AA74284DCE65006B60A7 /* LaunchScreen.storyboard */,
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8448AA76284DCE65006B60A7 /* LaunchScreen.storyboard in Resources */,
+				8495973F28589E6600F26667 /* BMHANNAProOTF (1).otf in Resources */,
 				8448AA73284DCE65006B60A7 /* Assets.xcassets in Resources */,
 				8448AA71284DCE64006B60A7 /* Main.storyboard in Resources */,
 			);
