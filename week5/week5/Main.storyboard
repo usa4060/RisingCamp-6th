@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--망고플레이트 로그인-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="InitPageViewController" title="망고플레이트 로그인" id="Y6W-OH-hqX" customClass="InitPageViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="망고플레이트_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dTH-1F-mGq">
+                                <rect key="frame" x="40" y="68" width="295" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="uC4-Pf-jLH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzt-Xw-DPp">
+                                <rect key="frame" x="40" y="388" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CdM-aa-eZj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="kakaoLoginBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b4P-Pl-fe1"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakao_login_large_wide" translatesAutoresizingMaskIntoConstraints="NO" id="VTo-F4-lRf">
+                                <rect key="frame" x="40" y="388" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="D0m-LK-2al"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dTH-1F-mGq" secondAttribute="bottom" constant="510" id="6aj-5d-WQf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dTH-1F-mGq" secondAttribute="trailing" constant="40" id="I3k-9A-1jm"/>
+                            <constraint firstAttribute="trailing" secondItem="VTo-F4-lRf" secondAttribute="trailing" constant="40" id="Wxe-vZ-23Y"/>
+                            <constraint firstItem="dTH-1F-mGq" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="40" id="cRG-xy-YgS"/>
+                            <constraint firstItem="VTo-F4-lRf" firstAttribute="top" secondItem="dTH-1F-mGq" secondAttribute="bottom" constant="120" id="hlq-ym-2lH"/>
+                            <constraint firstItem="VTo-F4-lRf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="k1f-qH-4Ug"/>
+                            <constraint firstItem="Gzt-Xw-DPp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="kAo-rp-gLQ"/>
+                            <constraint firstItem="Gzt-Xw-DPp" firstAttribute="top" secondItem="dTH-1F-mGq" secondAttribute="bottom" constant="120" id="qLU-4s-Y6r"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gzt-Xw-DPp" secondAttribute="trailing" constant="40" id="uX7-PX-8kp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="kakaoLoginBtn" destination="VTo-F4-lRf" id="cot-Ic-YQb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="7"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kakao_login_large_wide" width="600" height="90"/>
+        <image name="망고플레이트_Logo" width="3508" height="1583"/>
+    </resources>
+</document>
