@@ -53,12 +53,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jpd-s0-4rj" userLabel="상단 뷰">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5c-hN-7qq">
-                                        <rect key="frame" x="12" y="76" width="66.5" height="20"/>
-                                        <fontDescription key="fontDescription" name="BMHANNAProOTF" family="BM HANNA Pro OTF" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eaY-0O-4WO">
                                         <rect key="frame" x="24" y="104" width="366" height="4"/>
                                     </progressView>
@@ -68,8 +62,8 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 점" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcV-ap-gkX">
-                                        <rect key="frame" x="364.5" y="81.5" width="25.5" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0점" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcV-ap-gkX">
+                                        <rect key="frame" x="369.5" y="81.5" width="20.5" height="14.5"/>
                                         <fontDescription key="fontDescription" name="BMHANNAProOTF" family="BM HANNA Pro OTF" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -83,8 +77,6 @@
                                     <constraint firstItem="hlV-Rh-V4p" firstAttribute="centerY" secondItem="Jpd-s0-4rj" secondAttribute="centerY" id="H1c-7F-3ai"/>
                                     <constraint firstItem="vcV-ap-gkX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jpd-s0-4rj" secondAttribute="leading" constant="20" symbolic="YES" id="ImT-5F-iLG"/>
                                     <constraint firstAttribute="trailing" secondItem="vcV-ap-gkX" secondAttribute="trailing" constant="24" id="J1X-PN-3kI"/>
-                                    <constraint firstItem="K5c-hN-7qq" firstAttribute="leading" secondItem="Jpd-s0-4rj" secondAttribute="leading" constant="12" id="Vk1-Yo-K32"/>
-                                    <constraint firstAttribute="bottom" secondItem="K5c-hN-7qq" secondAttribute="bottom" constant="24" id="bFu-iY-4WM"/>
                                     <constraint firstItem="eaY-0O-4WO" firstAttribute="centerX" secondItem="Jpd-s0-4rj" secondAttribute="centerX" id="mRk-70-chw"/>
                                     <constraint firstAttribute="trailing" secondItem="eaY-0O-4WO" secondAttribute="trailing" constant="24" id="ret-s7-Y2m"/>
                                     <constraint firstItem="hlV-Rh-V4p" firstAttribute="centerX" secondItem="Jpd-s0-4rj" secondAttribute="centerX" id="t3W-99-Q9X"/>
@@ -166,7 +158,6 @@
                         <outlet property="startBtn" destination="eAO-bl-cdb" id="UPO-dx-3Mo"/>
                         <outlet property="swordView" destination="Ujq-YL-Qn8" id="g5D-24-gdv"/>
                         <outlet property="timeProgressView" destination="eaY-0O-4WO" id="bBd-jZ-6iu"/>
-                        <outlet property="timerLabel" destination="K5c-hN-7qq" id="xdK-Hb-XEE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJh-yr-0pU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

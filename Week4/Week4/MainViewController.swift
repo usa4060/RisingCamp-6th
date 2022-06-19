@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     var swordValue : Int = 0; // 검 이미지 변경값
     var deathCountMonster : Int = 0; // 몬스터의 데스 카운터
     var countTimer : Timer?
-    var counter : Float = 0        // 게임 진행시간을 60sec으로 맞춤
+    var counter : Float = 60       // 게임 진행시간을 60sec으로 맞춤
     var score : Int = 0         // 0점 시작으로 초기화
     var level : Int = 1         // 최초 레벨은 1시작
     var deathCountUser : Int = 0          // 죽은 횟수
@@ -38,7 +38,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startMainViewController()
-        self.countTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changeTimerText), userInfo: nil, repeats: false)
+       
     }
     
     //MARK: - MainViewController에 들어오면 처음 보게되는 모습
@@ -61,6 +61,7 @@ class MainViewController: UIViewController {
     func startGame(difficulty : String){
         if (difficulty == "EASY"){
             generateMonsterEASY()
+            self.countTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changeTimerText), userInfo: nil, repeats: true)
             // 타이머 시작
             // 음악 시작
             // 이 기능들이 들어가는 공간임
@@ -73,13 +74,12 @@ class MainViewController: UIViewController {
     
     @objc func changeTimerText(){
         if counter != 0 {
-            self.timerLabel.text = "00 : \(String(format: "%02d", counter))"
-            self.counter -= 1
-            self.timeProgressView.progress = 60/self.counter
+            self.timeProgressView.progress = self.counter/60
             print("남은 COUNTER : \(self.counter)")
-            if counter < 0.0 { countTimer?.invalidate() }
+            self.counter -= 1
         } else {
-            //endEffect() // 음악 정지, 타이머 종료(메모리 해제)
+            self.timeProgressView.progress = 0
+            endEffect()          // 음악 정지, 타이머 종료(메모리 해제)
             print("Timer End")
             
             
@@ -90,6 +90,14 @@ class MainViewController: UIViewController {
             // self.navigationController?.pushViewController(finishVC, animated: true)
         }
     }
+    
+    
+    //MARK: - 타이머 종료와 동시에 모두 정지
+    func endEffect(){
+        self.countTimer?.invalidate()
+        self.countTimer = nil
+    }
+    
     
     //MARK: - 현재 남아있는 몬스터에 따라 나머지 몬스터 생성하는 함수   (UI가 변경되므로 global -> main Queue 사용)
     func generateMonsterEASY(){
