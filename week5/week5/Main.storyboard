@@ -64,6 +64,76 @@
             </objects>
             <point key="canvasLocation" x="399" y="7"/>
         </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="DdB-Od-kb4">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="jHq-jo-NKF" customClass="TabBarViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="imw-tc-0bX"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GLG-hV-7sV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.91764705879999997" green="0.51302361490000004" blue="0.31366559859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jh4-Gf-dO8" kind="relationship" relationship="viewControllers" id="WIz-4i-7PR"/>
+                        <segue destination="hFO-yh-CMc" kind="relationship" relationship="viewControllers" id="yOu-Ht-o5Q"/>
+                        <segue destination="pz3-oX-ZV8" kind="relationship" relationship="viewControllers" id="MfP-IW-mxF"/>
+                        <segue destination="bZv-07-23c" kind="relationship" relationship="viewControllers" id="VBI-Ss-kHy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkY-wl-dRi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1289" y="7"/>
+        </scene>
+        <!--FindRestaurant-->
+        <scene sceneID="jBD-97-17N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FindRestaurant" id="jh4-Gf-dO8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="JfD-5e-2Er"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8v-q9-ck4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="436"/>
+        </scene>
+        <!--MangoPick-->
+        <scene sceneID="nL1-I6-uWM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MangoPick" id="hFO-yh-CMc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="OZH-cq-b9r"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVF-ip-f6S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="436"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="qF8-wW-dKf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="News" id="pz3-oX-ZV8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ILs-Qn-mld"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKJ-7a-OXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510" y="436"/>
+        </scene>
+        <!--MyInfo-->
+        <scene sceneID="SrT-ie-nBr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyInfo" id="bZv-07-23c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="JEM-Bm-Z5f"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKT-YF-qZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930" y="436"/>
+        </scene>
     </scenes>
     <resources>
         <image name="kakao_login_large_wide" width="600" height="90"/>

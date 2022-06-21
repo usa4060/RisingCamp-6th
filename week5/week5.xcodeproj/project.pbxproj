@@ -17,9 +17,13 @@
 		841DEFCA285F28CD003F7CDD /* MyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841DEFC9285F28CD003F7CDD /* MyInfo.storyboard */; };
 		841DEFCC285F8435003F7CDD /* FindRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DEFCB285F8435003F7CDD /* FindRestaurantViewController.swift */; };
 		84AD4BBB285F940000D3AC9C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD4BBA285F940000D3AC9C /* TabBarViewController.swift */; };
-		84AD4BBD285F972600D3AC9C /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AD4BBC285F972600D3AC9C /* MainTabBar.storyboard */; };
 		84AD4BBF285F978A00D3AC9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AD4BBE285F978A00D3AC9C /* Main.storyboard */; };
+		84AD4BC1285F99CB00D3AC9C /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD4BC0285F99CB00D3AC9C /* MyInfoViewController.swift */; };
 		84B5ACC7285F18AB00B3CEA6 /* InitPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5ACC6285F18AB00B3CEA6 /* InitPageViewController.swift */; };
+		84CEFCA12861ABFB00E9ED9F /* FindResCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFC9F2861ABFB00E9ED9F /* FindResCollectionViewCell.swift */; };
+		84CEFCA22861ABFB00E9ED9F /* FindResCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEFCA02861ABFB00E9ED9F /* FindResCollectionViewCell.xib */; };
+		84CEFCA42861B2D300E9ED9F /* dataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFCA32861B2D300E9ED9F /* dataModel.swift */; };
+		84CEFCA62861C20B00E9ED9F /* RequestResData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFCA52861C20B00E9ED9F /* RequestResData.swift */; };
 		91179ED9FFA881612EC43E9F /* Pods_week5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F62CECEC6DAD502BFC05C8B /* Pods_week5.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +41,13 @@
 		841DEFC9285F28CD003F7CDD /* MyInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyInfo.storyboard; sourceTree = "<group>"; };
 		841DEFCB285F8435003F7CDD /* FindRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRestaurantViewController.swift; sourceTree = "<group>"; };
 		84AD4BBA285F940000D3AC9C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		84AD4BBC285F972600D3AC9C /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		84AD4BBE285F978A00D3AC9C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		84AD4BC0285F99CB00D3AC9C /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		84B5ACC6285F18AB00B3CEA6 /* InitPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitPageViewController.swift; sourceTree = "<group>"; };
+		84CEFC9F2861ABFB00E9ED9F /* FindResCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindResCollectionViewCell.swift; sourceTree = "<group>"; };
+		84CEFCA02861ABFB00E9ED9F /* FindResCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindResCollectionViewCell.xib; sourceTree = "<group>"; };
+		84CEFCA32861B2D300E9ED9F /* dataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataModel.swift; sourceTree = "<group>"; };
+		84CEFCA52861C20B00E9ED9F /* RequestResData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResData.swift; sourceTree = "<group>"; };
 		9F62CECEC6DAD502BFC05C8B /* Pods_week5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_week5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A9A6860BC9AFBB296E9923 /* Pods-week5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-week5.release.xcconfig"; path = "Target Support Files/Pods-week5/Pods-week5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,15 +107,19 @@
 				8419EB0B285F0905008D90CE /* LaunchScreen.storyboard */,
 				84AD4BBE285F978A00D3AC9C /* Main.storyboard */,
 				84B5ACC6285F18AB00B3CEA6 /* InitPageViewController.swift */,
-				84AD4BBC285F972600D3AC9C /* MainTabBar.storyboard */,
 				84AD4BBA285F940000D3AC9C /* TabBarViewController.swift */,
 				841DEFC3285F28A3003F7CDD /* FindRestaurant.storyboard */,
 				841DEFCB285F8435003F7CDD /* FindRestaurantViewController.swift */,
 				841DEFC5285F28B3003F7CDD /* MangoPick.storyboard */,
 				841DEFC7285F28C0003F7CDD /* News.storyboard */,
 				841DEFC9285F28CD003F7CDD /* MyInfo.storyboard */,
+				84AD4BC0285F99CB00D3AC9C /* MyInfoViewController.swift */,
 				8419EB09285F0905008D90CE /* Assets.xcassets */,
 				8419EB0E285F0905008D90CE /* Info.plist */,
+				84CEFC9F2861ABFB00E9ED9F /* FindResCollectionViewCell.swift */,
+				84CEFCA02861ABFB00E9ED9F /* FindResCollectionViewCell.xib */,
+				84CEFCA32861B2D300E9ED9F /* dataModel.swift */,
+				84CEFCA52861C20B00E9ED9F /* RequestResData.swift */,
 			);
 			path = week5;
 			sourceTree = "<group>";
@@ -172,13 +184,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CEFCA22861ABFB00E9ED9F /* FindResCollectionViewCell.xib in Resources */,
 				841DEFC4285F28A3003F7CDD /* FindRestaurant.storyboard in Resources */,
 				8419EB0D285F0905008D90CE /* LaunchScreen.storyboard in Resources */,
 				841DEFCA285F28CD003F7CDD /* MyInfo.storyboard in Resources */,
 				84AD4BBF285F978A00D3AC9C /* Main.storyboard in Resources */,
 				8419EB0A285F0905008D90CE /* Assets.xcassets in Resources */,
 				841DEFC8285F28C0003F7CDD /* News.storyboard in Resources */,
-				84AD4BBD285F972600D3AC9C /* MainTabBar.storyboard in Resources */,
 				841DEFC6285F28B3003F7CDD /* MangoPick.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +247,11 @@
 				8419EB01285F0903008D90CE /* AppDelegate.swift in Sources */,
 				84B5ACC7285F18AB00B3CEA6 /* InitPageViewController.swift in Sources */,
 				8419EB03285F0903008D90CE /* SceneDelegate.swift in Sources */,
+				84CEFCA62861C20B00E9ED9F /* RequestResData.swift in Sources */,
 				84AD4BBB285F940000D3AC9C /* TabBarViewController.swift in Sources */,
+				84CEFCA12861ABFB00E9ED9F /* FindResCollectionViewCell.swift in Sources */,
+				84CEFCA42861B2D300E9ED9F /* dataModel.swift in Sources */,
+				84AD4BC1285F99CB00D3AC9C /* MyInfoViewController.swift in Sources */,
 				841DEFCC285F8435003F7CDD /* FindRestaurantViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
