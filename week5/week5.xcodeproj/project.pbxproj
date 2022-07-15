@@ -22,8 +22,8 @@
 		84B5ACC7285F18AB00B3CEA6 /* InitPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5ACC6285F18AB00B3CEA6 /* InitPageViewController.swift */; };
 		84CEFCA12861ABFB00E9ED9F /* FindResCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFC9F2861ABFB00E9ED9F /* FindResCollectionViewCell.swift */; };
 		84CEFCA22861ABFB00E9ED9F /* FindResCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CEFCA02861ABFB00E9ED9F /* FindResCollectionViewCell.xib */; };
-		84CEFCA42861B2D300E9ED9F /* dataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFCA32861B2D300E9ED9F /* dataModel.swift */; };
 		84CEFCA62861C20B00E9ED9F /* RequestResData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFCA52861C20B00E9ED9F /* RequestResData.swift */; };
+		84CEFCAC28625A7600E9ED9F /* ResImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CEFCAB28625A7600E9ED9F /* ResImageData.swift */; };
 		91179ED9FFA881612EC43E9F /* Pods_week5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F62CECEC6DAD502BFC05C8B /* Pods_week5.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +46,8 @@
 		84B5ACC6285F18AB00B3CEA6 /* InitPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitPageViewController.swift; sourceTree = "<group>"; };
 		84CEFC9F2861ABFB00E9ED9F /* FindResCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindResCollectionViewCell.swift; sourceTree = "<group>"; };
 		84CEFCA02861ABFB00E9ED9F /* FindResCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindResCollectionViewCell.xib; sourceTree = "<group>"; };
-		84CEFCA32861B2D300E9ED9F /* dataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataModel.swift; sourceTree = "<group>"; };
 		84CEFCA52861C20B00E9ED9F /* RequestResData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResData.swift; sourceTree = "<group>"; };
+		84CEFCAB28625A7600E9ED9F /* ResImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResImageData.swift; sourceTree = "<group>"; };
 		9F62CECEC6DAD502BFC05C8B /* Pods_week5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_week5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A9A6860BC9AFBB296E9923 /* Pods-week5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-week5.release.xcconfig"; path = "Target Support Files/Pods-week5/Pods-week5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,8 +118,8 @@
 				8419EB0E285F0905008D90CE /* Info.plist */,
 				84CEFC9F2861ABFB00E9ED9F /* FindResCollectionViewCell.swift */,
 				84CEFCA02861ABFB00E9ED9F /* FindResCollectionViewCell.xib */,
-				84CEFCA32861B2D300E9ED9F /* dataModel.swift */,
 				84CEFCA52861C20B00E9ED9F /* RequestResData.swift */,
+				84CEFCAB28625A7600E9ED9F /* ResImageData.swift */,
 			);
 			path = week5;
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 				84CEFCA62861C20B00E9ED9F /* RequestResData.swift in Sources */,
 				84AD4BBB285F940000D3AC9C /* TabBarViewController.swift in Sources */,
 				84CEFCA12861ABFB00E9ED9F /* FindResCollectionViewCell.swift in Sources */,
-				84CEFCA42861B2D300E9ED9F /* dataModel.swift in Sources */,
+				84CEFCAC28625A7600E9ED9F /* ResImageData.swift in Sources */,
 				84AD4BC1285F99CB00D3AC9C /* MyInfoViewController.swift in Sources */,
 				841DEFCC285F8435003F7CDD /* FindRestaurantViewController.swift in Sources */,
 			);

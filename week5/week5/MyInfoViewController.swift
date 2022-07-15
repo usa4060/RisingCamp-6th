@@ -12,17 +12,16 @@ class MyInfoViewController: UIViewController {
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
-    var tempNick : String = ""
-    var tempEmail : String = ""
-    
+    var N = "12"
+    var E = "12"
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("\(tempNick) , \(tempEmail)")
-        
-        self.nicknameLabel.text = tempNick
-        self.emailLabel.text = tempEmail
     }
     
+    func setData(_ nickName : String, _ email : String){
+        N = nickName
+        E = email
+    }
 
 }

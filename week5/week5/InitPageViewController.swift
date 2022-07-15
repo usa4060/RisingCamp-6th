@@ -38,13 +38,9 @@ class InitPageViewController: UIViewController {
                         print(error)
                     } else {
                         guard let nickname = user?.kakaoAccount?.profile?.nickname, let email = user?.kakaoAccount?.email else {return;}
-                        
                         let storyboard = UIStoryboard(name: "MyInfo", bundle: nil)
                         guard let nextVC = storyboard.instantiateViewController(withIdentifier: "MyInfoViewController") as? MyInfoViewController else { return }
-
-                        nextVC.tempNick = nickname
-                        nextVC.tempEmail = email
-                        
+                        nextVC.setData(nickname, email)
                         self.presentToMain()
 
                     }
